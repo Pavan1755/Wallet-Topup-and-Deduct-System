@@ -94,8 +94,7 @@
 
 # wallet-frontend Features
 ## User-Friendly Interface:
-###### Use React for the frontend, with Redux for state management. Use 
-modern JavaScript.
+###### Use React for the frontend, with Redux for state management. Use modern JavaScript.
 ###### Simple input forms for user ID and transaction amounts.
 
 ## Transaction Options:

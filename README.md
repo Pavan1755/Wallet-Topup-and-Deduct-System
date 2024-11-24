@@ -94,7 +94,8 @@
 
 # wallet-frontend Features
 ## User-Friendly Interface:
-###### Clear, minimalist design using Tailwind CSS.
+###### Use React for the frontend, with Redux for state management. Use 
+modern JavaScript.
 ###### Simple input forms for user ID and transaction amounts.
 
 ## Transaction Options:

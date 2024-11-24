@@ -140,9 +140,5 @@
 > Host the application on platforms like AWS, Heroku, or Vercel for live use.
 
 
-# License
-> This project is licensed under the MIT License. See the LICENSE file for details.
-
-
 # Author
 > Developed by Pavan Kumar. Contributions and feedback are welcome!

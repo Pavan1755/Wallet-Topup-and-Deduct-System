@@ -21,7 +21,7 @@
 ###### Node.js: Server-side runtime.
 ###### Express: Web framework for API development.
 ###### Sequelize: ORM for database interactions.
-###### SQLite: Lightweight database for local storage.
+###### Postgresql: A scalable, open-source database system suitable for both lightweight local storage and large-scale applications.
 ###### CORS: Middleware for handling cross-origin requests.
 
 

@@ -1,17 +1,13 @@
 # Wallet Topup and Deduct System
-> *The Wallet System project is a simple web application designed for managing wallet transactions. Users can top-up, deduct, and view their wallet balances. It comprises a backend API built with Node.js and Express, and a frontend UI built with React.*
+*The Wallet System project is a simple web application designed for managing wallet transactions. Users can top-up, deduct, and view their wallet balances. It comprises a backend API built with Node.js and Express, and a frontend UI built with React.*
 
 
 # Features
-```java
-Top-Up Wallet: Add money to the user's wallet.
-```
-```java
-Deduct Wallet: Deduct money from the user's wallet.
-```
-View Balance: View the current balance of a user by providing their user ID.
-Error Indicators: Display error messages for invalid inputs or failed transactions.
-Loading Indicators: Show animations while processing requests.
+###### Top-Up Wallet: Add money to the user's wallet.
+###### Deduct Wallet: Deduct money from the user's wallet.
+###### View Balance: View the current balance of a user by providing their user ID.
+###### Error Indicators: Display error messages for invalid inputs or failed transactions.
+###### Loading Indicators: Show animations while processing requests.
 
 
 # Technologies Used

@@ -3,11 +3,15 @@
 
 
 # Features
-> Top-Up Wallet: Add money to the user's wallet.
-> Deduct Wallet: Deduct money from the user's wallet.
-> View Balance: View the current balance of a user by providing their user ID.
-> Error Indicators: Display error messages for invalid inputs or failed transactions.
-> Loading Indicators: Show animations while processing requests.
+```java
+Top-Up Wallet: Add money to the user's wallet.
+```
+```java
+Deduct Wallet: Deduct money from the user's wallet.
+```
+View Balance: View the current balance of a user by providing their user ID.
+Error Indicators: Display error messages for invalid inputs or failed transactions.
+Loading Indicators: Show animations while processing requests.
 
 
 # Technologies Used

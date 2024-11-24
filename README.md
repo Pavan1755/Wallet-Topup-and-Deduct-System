@@ -12,17 +12,17 @@
 
 # Technologies Used
 ## wallet-frontend[Frontend]
-> React: Frontend library for building user interfaces.
-> Redux: State management for handling wallet data.
-> Axios: HTTP client for making API requests.
-> Tailwind CSS: Utility-first CSS framework for styling.
+###### React: Frontend library for building user interfaces.
+###### Redux: State management for handling wallet data.
+###### Axios: HTTP client for making API requests.
+###### Tailwind CSS: Utility-first CSS framework for styling.
 
 ## wallet-system[Backend]
-> Node.js: Server-side runtime.
-> Express: Web framework for API development.
-> Sequelize: ORM for database interactions.
-> SQLite: Lightweight database for local storage.
-> CORS: Middleware for handling cross-origin requests.
+###### Node.js: Server-side runtime.
+###### Express: Web framework for API development.
+###### Sequelize: ORM for database interactions.
+###### SQLite: Lightweight database for local storage.
+###### CORS: Middleware for handling cross-origin requests.
 
 
 # Setup Instructions
@@ -34,8 +34,8 @@
 > npm install
 
 ### Start the development server:
-> npm run start -p 3001
-> The wallet-frontend will run on "http://localhost:3001".
+###### npm run start -p 3001
+###### The wallet-frontend will run on "http://localhost:3001".
 
 ## wallet-system[Backend] Setup
 ### Navigate to the backend folder:-
@@ -45,12 +45,12 @@
 > npm install
 
 ### Set up environment variables:-
-> Create a .env file in the wallet-system directory and add:
+##### Create a .env file in the wallet-system directory and add:
 > PORT=3000
 
 ### Run the wallet-system server:
-> npx ts-node .\src\server.ts
-> The wallet-system will run on "http://localhost:3000".
+###### npx ts-node .\src\server.ts
+###### The wallet-system will run on "http://localhost:3000".
 
 
 # API Endpoints
@@ -94,16 +94,16 @@
 
 # wallet-frontend Features
 ## User-Friendly Interface:
-> Clear, minimalist design using Tailwind CSS.
-> Simple input forms for user ID and transaction amounts.
+###### Clear, minimalist design using Tailwind CSS.
+###### Simple input forms for user ID and transaction amounts.
 
 ## Transaction Options:
 > Radio buttons to select between Top-Up and Deduct.
 
 ## Real-Time Feedback:
-> Loading animations while API requests are being processed.
-> Error messages displayed when requests fail or inputs are invalid.
-> Current balance shown dynamically after fetching.
+###### Loading animations while API requests are being processed.
+###### Error messages displayed when requests fail or inputs are invalid.
+###### Current balance shown dynamically after fetching.
 
 ## View Balance:
 > Separate field to view balance by user ID.
@@ -112,14 +112,14 @@
 # Error Handling
 ## wallet-frontend:
 ### Displays a "User not found" message for:
-> Enter Invalid user ID.
-> API request errors (e.g., server not reachable).
-> Errors are shown in a red-colored alert box for clear visibility.
+###### Enter Invalid user ID.
+###### API request errors (e.g., server not reachable).
+###### Errors are shown in a red-colored alert box for clear visibility.
 
 ## wallet-system:
 ### Returns detailed error responses for:
-> Invalid requests (e.g., missing user_id or amount).
-> Database issues (e.g., user not found).
+###### Invalid requests (e.g., missing user_id or amount).
+###### Database issues (e.g., user not found).
 
 
 # Future Enhancements
@@ -130,8 +130,8 @@
 > Store and display a history of transactions for each user.
 
 ## Improved UI/UX:
-> Add toast notifications for success and error feedback.
-> Enhance responsiveness for mobile devices.
+###### Add toast notifications for success and error feedback.
+###### Enhance responsiveness for mobile devices.
 
 ## Validation:
 > mplement stricter validation on the backend and frontend to prevent incorrect inputs.

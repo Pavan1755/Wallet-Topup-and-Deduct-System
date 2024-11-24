@@ -8,14 +8,13 @@ const sequelize = new Sequelize(process.env.DATABASE_URL as string, {
     protocol: 'postgres',
     dialectOptions: {
         ssl: {
-            require: true, // Enforce SSL for connection
-            rejectUnauthorized: false, // Accept self-signed certificates
+            require: true,
+            rejectUnauthorized: false,
         },
     },
-    logging: console.log, // Enable SQL logging (optional)
+    logging: console.log,
 });
 
-// Test the connection
 sequelize.authenticate()
     .then(() => {
         console.log('Database connected successfully.');

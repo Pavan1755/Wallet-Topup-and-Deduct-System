@@ -6,15 +6,19 @@ import axios from 'axios';
 const HomePage = () => {
   const [amount, setAmount] = useState('');
   const [userId, setUserId] = useState('');
-  const [viewUserId, setViewUserId] = useState(''); // Separate field for view balance user ID
+  const [viewUserId, setViewUserId] = useState('');
   const [transactionType, setTransactionType] = useState('topup');
   const balance = useSelector(selectBalance);
-  const loading = useSelector((state) => state.wallet.loading); // Assuming you have a loading state
-  const error = useSelector((state) => state.wallet.error); // Assuming you have an error state
+  const loading = useSelector((state) => state.wallet.loading);
+  const error = useSelector((state) => state.wallet.error);
   const dispatch = useDispatch();
 
   const handleAmountChange = (e) => {
-    setAmount(e.target.value);
+    const value = e.target.value;
+    if (value === '' || /^[0-9]*\.?[0-9]*$/.test(value)) {
+      setAmount(value); 
+    }
+  
   };
 
   const handleUserIdChange = (e) => {
@@ -22,7 +26,7 @@ const HomePage = () => {
   };
 
   const handleViewUserIdChange = (e) => {
-    setViewUserId(e.target.value); // Change the view balance user ID
+    setViewUserId(e.target.value)
   };
 
   const handleTransactionTypeChange = (e) => {
@@ -35,10 +39,17 @@ const HomePage = () => {
       alert("Please provide user ID and amount");
       return;
     }
+    const numericAmount = parseFloat(amount);
+
+    if (isNaN(numericAmount) || numericAmount <= 0) {
+      alert("Please enter a valid positive amount");
+      return;
+    }
+    
     setAmount("")
     try {
       dispatch(setLoading(true));
-      dispatch(setError('')); // Reset error before new action
+      dispatch(setError(''));
 
       const apiUrl = transactionType === 'topup' ? 'http://localhost:3000/wallet/topup' : 'http://localhost:3000/wallet/deduct';
       const response = await axios.post(apiUrl, { user_id: userId, amount });
@@ -84,21 +95,21 @@ const HomePage = () => {
       <div className="bg-white shadow-lg rounded-lg w-full max-w-lg p-8">
         <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">Wallet System</h1>
 
-        {/* Loading indicator */}
+        {}
         {loading && (
           <div className="flex justify-center mb-6">
             <div className="animate-spin border-t-4 border-blue-500 w-8 h-8 rounded-full"></div>
           </div>
         )}
 
-        {/* Error message */}
+        {}
         {error && (
           <div className="bg-red-100 text-red-700 p-4 rounded-lg mb-6">
             <strong>Error:</strong> {error}
           </div>
         )}
 
-        {/* View Balance Section */}
+        {}
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold text-blue-600 mb-4">View Balance</h2>
           <input
@@ -119,7 +130,7 @@ const HomePage = () => {
           )}
         </div>
 
-        {/* Transaction Form */}
+        {}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex gap-4 mb-4">
             <input
@@ -136,6 +147,7 @@ const HomePage = () => {
               placeholder="Amount"
               className="border-2 border-gray-300 p-3 w-1/2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               min="0"
+              step="any"
             />
           </div>
 

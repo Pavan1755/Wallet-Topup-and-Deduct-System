@@ -1,24 +1,20 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 import sequelize from '../config/db';
 
-// Define the attributes for the Wallet model
 interface WalletAttributes {
     id: number;
     user_id: string;
     balance: number;
 }
 
-// Define a type for creating new Wallet instances
 interface WalletCreationAttributes extends Optional<WalletAttributes, 'id' | 'balance'> {}
 
-// Extend the Sequelize Model with the Wallet attributes
 class Wallet extends Model<WalletAttributes, WalletCreationAttributes> implements WalletAttributes {
     public id!: number;
     public user_id!: string;
-    public balance!: number; // Add balance property here
+    public balance!: number;
 }
 
-// Initialize the Wallet model
 Wallet.init(
     {
         id: {
